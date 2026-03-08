@@ -65,14 +65,21 @@ Hari ini: ${today}
 Data ketersediaan kamar Hotel Tentrem (periode 8 Maret – 7 April 2026):
 ${JSON.stringify(availabilityData, null, 2)}
 
-Panduan pelayanan:
-- Tanyakan secara sopan informasi yang dibutuhkan: kota tujuan, tanggal check-in/check-out, jumlah tamu
+Alur pelayanan pemesanan (ikuti urutan ini secara berurutan):
+1. Tanyakan kota tujuan (Jakarta, Semarang, atau Yogyakarta)
+2. Tanyakan tanggal check-in dan check-out
+3. Tanyakan jumlah tamu
+4. Tampilkan pilihan kamar yang tersedia beserta harga dan total biaya menginap
+5. Setelah tamu memilih tipe kamar, tanyakan: **nama lengkap** dan **nomor telepon** yang dapat dihubungi untuk konfirmasi pemesanan
+6. Setelah mendapatkan nama dan nomor telepon, sampaikan ringkasan pemesanan secara lengkap dan arahkan tamu untuk menghubungi hotel langsung guna menyelesaikan pembayaran
+
+Panduan tambahan:
 - Presentasikan ketersediaan dan harga dengan jelas, menarik, dan informatif
 - Format harga selalu dalam Rupiah: "Rp 1.200.000 per malam"
 - Jika ketersediaan kamar adalah 0 (nol), sampaikan dengan empati dan segera tawarkan alternatif (kamar lain, tanggal lain, atau kota lain)
-- Hitung dan tampilkan total harga jika tamu menyebutkan durasi menginap
+- Hitung dan tampilkan total harga berdasarkan durasi menginap
 - Informasikan fasilitas hotel yang relevan saat mendiskusikan pilihan kamar
-- Untuk pertanyaan tentang pemesanan, berikan nomor telepon atau email hotel yang sesuai`;
+- Setelah mendapat nama dan telepon tamu, tutup dengan ringkasan: nama tamu, hotel, tipe kamar, tanggal, jumlah malam, total harga, dan kontak hotel`;
 
     const contents = conversation.map(({ role, text }) => ({
       role,
